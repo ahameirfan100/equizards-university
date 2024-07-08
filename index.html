@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eQuizards AI University</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script src="scripts.js" defer></script>
+    <script src="firebase-init.js" defer></script>
+</head>
+<body>
+     <div id="header-container"></div>
+    <!-- Include this script to load the header -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+                    // Initialize event listeners after the header is loaded
+                    initializeHeaderEventListeners();
+                });
+        });
+    </script> 
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to eQuizards AI University</h1>
+            <p>Transforming Education with AI-Powered Learning</p>
+            <div class="cta-buttons">
+                <button>Get Started</button>
+                <button>Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Catalog Section -->
+   
+    <!-- Key Features Section -->
+    <section class="features">
+        <div class="feature">
+            <img src="images/feature1.png" alt="Interactive Content Creation">
+            <h3>Interactive Content Creation</h3>
+        </div>
+        <div class="feature">
+            <img src="images/AI INTRO.webp" alt="AI-Powered MCQ Generation">
+            <h3>AI-Powered MCQ Generation</h3>
+        </div>
+        <div class="feature">
+            <img src="images/images.jpeg" alt="Video Lectures and Tutorials">
+            <h3>Video Lectures and Tutorials</h3>
+        </div>
+        <div class="feature">
+            <img src="images/person-holding-magnet-monitoring-data-concept-inbound-marketing-flat-illustration_203633-6725.avif" alt="AI Chatbot for Query Resolution">
+            <h3>AI Chatbot for Query Resolution</h3>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Students Say</h2>
+        <div class="testimonial">
+            <p>"eQuizards has transformed my learning experience!"</p>
+            <span>★★★★★</span>
+            <img src="images/student1.png" alt="Student 1">
+        </div>
+        <div class="testimonial">
+            <p>"The AI-powered features are truly revolutionary."</p>
+            <span>★★★★★</span>
+            <img src="images/student2.png" alt="Student 2">
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section class="success-stories">
+        <h2>Success Stories</h2>
+        <div class="story">
+            <img src="images/story1.png" alt="Success Story 1">
+            <p>Read how eQuizards helped this student achieve their dreams.</p>
+        </div>
+        <div class="story">
+            <img src="images/story2.png" alt="Success Story 2">
+            <p>Discover how our AI tools are making a difference.</p>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="call-to-action">
+        <h2>Join eQuizards AI University Today</h2>
+        <button>Join Now</button>
+        <button>Explore Courses</button>
+    </section>
+
+    <!-- Footer -->
+    <footer include-html="footer.html"></footer>
+</body>
+</html>

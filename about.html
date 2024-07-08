@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About Us - eQuizards AI University</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script src="firebase-init.js" defer></script>
+    <script src="scripts.js" defer></script>
+</head>
+<div id="header-container"></div>
+<!-- Include this script to load the header -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+                // Initialize event listeners after the header is loaded
+                initializeHeaderEventListeners();
+            });
+    });
+</script> 
+<div class="about-container">
+        <section class="hero parallax" data-parallax-speed="0.5">
+            <div class="hero-content">
+                <h1 class="hero-title">About Us</h1>
+                <p class="hero-subtitle">Discover the mission, team, and values that drive eQuizards AI University to transform education through the power of AI.</p>
+            </div>
+        </section>
+        <section class="mission">
+            <h2 class="section-title">Our Mission</h2>
+            <p class="section-text">E-Quizards is a cutting-edge digital platform revolutionizing the way students prepare for competitive exams. Leveraging advanced AI technology, e-Quizards offers a comprehensive suite of features designed to optimize the learning experience. From AI-powered MCQ generation to interactive gist summaries and Deep Dive into your Summaries , e-Quizards empowers users to study smarter, not harder. Our user-friendly interface and personalized learning approach ensure that students can tailor their study sessions to their individual needs, ultimately enhancing their chances of success. Whether you're a UPSC aspirant or a professional seeking to advance your career, e-Quizards is your ultimate companion on the path to excellence.</p>
+        </section>
+        <section class="parallax" data-parallax-speed="0.3" style="background-image: url('images/DALL·E\ 2024-07-08\ 17.04.24\ -\ An\ image\ representing\ \'e-Quizards\ AI\ University\'\,\ showcasing\ elements\ of\ AI\,\ education\,\ and\ technology.\ The\ image\ should\ include\ a\ modern\ and\ dynamic\ .webp');"></section>
+        <section class="team">
+            <h2 class="section-title">Meet Our Team</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="images/beautiful-nature-mountain-scenery-with-flowers-free-photo.webp" alt="Team Member 1">
+                    <h3>John Doe</h3>
+                    <p>CEO & Founder</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/images.jpeg" alt="Team Member 2">
+                    <h3>Jane Smith</h3>
+                    <p>Chief Technology Officer</p>
+                </div>
+                <div class="team-member">
+                    <img src="images/beautiful-nature-mountain-scenery-with-flowers-free-photo.webp" alt="Team Member 3">
+                    <h3>Sam Brown</h3>
+                    <p>Head of Marketing</p>
+                </div>
+            </div>
+        </section>
+        <section class="values">
+            <h2 class="section-title">Our Values</h2>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> Innovation</li>
+                <li><i class="fas fa-check-circle"></i> Excellence</li>
+                <li><i class="fas fa-check-circle"></i> Integrity</li>
+                <li><i class="fas fa-check-circle"></i> Collaboration</li>
+            </ul>
+        </section>
+        <section class="parallax" data-parallax-speed="0.3" style="background-image: url('images/DALL·E\ 2024-07-08\ 17.04.24\ -\ An\ image\ representing\ \'e-Quizards\ AI\ University\'\,\ showcasing\ elements\ of\ AI\,\ education\,\ and\ technology.\ The\ image\ should\ include\ a\ modern\ and\ dynamic\ .webp');"></section>
+        <section class="timeline">
+            <h2 class="section-title">Our Journey</h2>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2010</h3>
+                        <p>eQuizards AI University was founded with the mission to transform education through AI.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2012</h3>
+                        <p>Launched our first AI-powered learning platform.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2015</h3>
+                        <p>Expanded our course offerings to include a wide range of subjects.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2018</h3>
+                        <p>Introduced our AI chatbot for student support and query resolution.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2020</h3>
+                        <p>Reached 1 million students worldwide and launched new AI-driven features.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2022</h3>
+                        <p>Continuing to innovate and expand our impact in the field of education.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+    <footer include-html="footer.html"></footer>
+    <script>
+        // GSAP animations for sections
+        gsap.from('.hero-title', { duration: 1.5, y: -50, opacity: 0, ease: 'bounce' });
+        gsap.from('.hero-subtitle', { duration: 1.5, y: 50, opacity: 0, ease: 'power2.out', delay: 0.5 });
+        gsap.from('.section-title', { duration: 1, x: -100, opacity: 0, stagger: 0.3 });
+        gsap.from('.section-text, .team-member, .values ul li', { duration: 1, x: 100, opacity: 0, stagger: 0.2 });
+        gsap.from('.timeline-item', { duration: 1, x: -100, opacity: 0, stagger: 0.3, ease: 'power2.out' });
+
+        // Parallax effect using vanilla JavaScript
+        document.addEventListener('scroll', function() {
+            document.querySelectorAll('.parallax').forEach(function(el) {
+                var speed = el.getAttribute('data-parallax-speed');
+                var yPos = -(window.scrollY * speed);
+                var coords = '50% ' + yPos + 'px';
+                el.style.backgroundPosition = coords;
+            });
+        });
+    </script>
+</body>
+</html>

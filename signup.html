@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - eQuizards AI University</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script src="scripts.js" defer></script>
+    
+    <script src="firebase-init.js" defer></script>
+</head>
+<body>
+    
+    <div class="signup-container">
+     
+        <div class="signup-image">
+     
+            <img src="images/person-holding-magnet-monitoring-data-concept-inbound-marketing-flat-illustration_203633-6725.avif" alt="Sign Up">
+        </div>
+        
+        <div class="signup-form">
+            <h2>Create Your Account</h2>
+            <button class="google-signup" id="googleSignup"><i class="fab fa-google"></i> Sign Up with Google</button>
+            <p>or</p>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                    <small>Error message</small>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <small>Error message</small>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <small>Error message</small>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    <small>Error message</small>
+                </div>
+                <button type="submit" class="signup-btn">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+  
+
+</body>
+</html>

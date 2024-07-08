@@ -1,0 +1,375 @@
+/* About Us Page Styles */
+.about-container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.hero {
+    background: url('images/DALL·E\ 2024-07-08\ 17.04.24\ -\ An\ image\ representing\ \'e-Quizards\ AI\ University\'\,\ showcasing\ elements\ of\ AI\,\ education\,\ and\ technology.\ The\ image\ should\ include\ a\ modern\ and\ dynamic\ .webp') no-repeat center center/cover;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: slideInFromLeft 1s ease-in-out;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+    animation: slideInFromRight 1s ease-in-out;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.primary-btn {
+    background: #007bff;
+    color: #fff;
+}
+
+.primary-btn:hover {
+    background: #0056b3;
+}
+
+.secondary-btn {
+    background: #f4f7f6;
+    color: #007bff;
+}
+
+.secondary-btn:hover {
+    background: #e2e6ea;
+}
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
+    padding: 20px 0;
+}
+
+.intro-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.intro-text {
+    max-width: 600px;
+}
+
+.intro-image {
+    max-width: 500px;
+}
+
+.intro-image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.section-title {
+    font-size: 32px;
+    color: #001f3f;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.section-text {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.services {
+    margin: 40px 0;
+}
+
+.services-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    text-align: center;
+    margin: 20px;
+    width: 45%;
+}
+
+.service-item img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.team {
+    margin: 40px 0;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    margin: 20px;
+    width: 30%;
+    transform: translateY(100px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    cursor: pointer;
+}
+
+.team-member:hover {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.team-member img:hover {
+    transform: scale(1.1);
+}
+
+.team-member h3 {
+    font-size: 22px;
+    margin: 10px 0;
+    color: #001f3f;
+}
+
+.team-member p {
+    font-size: 16px;
+    color: #666;
+}
+
+.values {
+    margin: 40px 0;
+    padding: 20px 0;
+}
+
+.values ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.values li {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.values li i {
+    color: #007bff;
+    margin-right: 10px;
+}
+
+/* Timeline Styles */
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 50px 0;
+    padding: 0 20px;
+}
+
+.timeline-item {
+    position: relative;
+    margin: 50px 0;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    background: #007bff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px #fff;
+}
+
+.timeline-item:nth-child(odd) {
+    align-items: flex-end;
+    text-align: right;
+    padding-left: 0;
+    padding-right: 40px;
+}
+
+.timeline-item:nth-child(odd)::before {
+    left: auto;
+    right: 0;
+}
+
+.timeline-content {
+    background: #f4f7f6;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+    color: #001f3f;
+}
+
+.timeline-content p {
+    margin-bottom: 0;
+    color: #333;
+}
+
+/* Parallax Styles */
+.parallax {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-image {
+        margin-top: 20px;
+    }
+
+    .services-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        width: 80%;
+    }
+
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member {
+        width: 80%;
+    }
+
+    .values ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timeline-item {
+        align-items: center !important;
+        text-align: left !important;
+        padding-left: 40px !important;
+        padding-right: 0 !important;
+    }
+
+    .timeline-item::before {
+        left: 0 !important;
+        right: auto !important;
+    }
+}

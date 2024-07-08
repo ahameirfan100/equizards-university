@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>About Us - eQuizards AI University</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="courses.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+        <script src="firebase-init.js" defer></script>
+        <script src="scripts.js" defer></script>
+    </head>
+<body>
+     <div id="header-container"></div>
+    <!-- Include this script to load the header -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+                    // Initialize event listeners after the header is loaded
+                    initializeHeaderEventListeners();
+                });
+        });
+    </script>
+    <div class="courses-container">
+        <!-- Enhanced Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Explore Our Courses</h1>
+                <p class="hero-subtitle">Join eQuizards AI University and unlock your potential with our cutting-edge AI-powered courses.</p>
+                <a href="#" class="btn primary-btn">Get Started</a>
+            </div>
+            <div class="hero-overlay"></div>
+        </section>
+
+        <!-- Courses Grid Section -->
+        <section class="courses-grid-section">
+            <h2 class="section-title">Featured Courses</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-image-container">
+                        <img src="images/AI INTRO.webp" alt="Course 1">
+                    </div>
+                    <div class="course-info">
+                        <h3>Introduction to AI</h3>
+                        <p>Learn the basics of Artificial Intelligence and its applications in various fields.</p>
+                        <a href="#" class="btn course-btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image-container">
+                        <img src="images/ML.webp" alt="Course 2">
+                    </div>
+                    <div class="course-info">
+                        <h3>Machine Learning</h3>
+                        <p>Dive deep into machine learning algorithms and their practical uses.</p>
+                        <a href="#" class="btn course-btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image-container">
+                        <img src="images/introtoai.webp" alt="Course 3">
+                    </div>
+                    <div class="course-info">
+                        <h3>Data Science</h3>
+                        <p>Explore data analysis, visualization, and data-driven decision making.</p>
+                        <a href="#" class="btn course-btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image-container">
+                        <img src="images/course4.jpg" alt="Course 4">
+                    </div>
+                    <div class="course-info">
+                        <h3>Natural Language Processing</h3>
+                        <p>Understand how to process and analyze large amounts of natural language data.</p>
+                        <a href="#" class="btn course-btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image-container">
+                        <img src="images/course5.jpg" alt="Course 5">
+                    </div>
+                    <div class="course-info">
+                        <h3>Deep Learning</h3>
+                        <p>Master deep learning techniques and build advanced neural networks.</p>
+                        <a href="#" class="btn course-btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image-container">
+                        <img src="images/course6.jpg" alt="Course 6">
+                    </div>
+                    <div class="course-info">
+                        <h3>AI in Healthcare</h3>
+                        <p>Discover how AI is transforming the healthcare industry.</p>
+                        <a href="#" class="btn course-btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <h2 class="section-title">What Our Students Say</h2>
+            <div class="testimonial">
+                <p>"eQuizards has transformed my learning experience!"</p>
+                <span>★★★★★</span>
+                <img src="images/student1.png" alt="Student 1">
+            </div>
+            <div class="testimonial">
+                <p>"The AI-powered features are truly revolutionary."</p>
+                <span>★★★★★</span>
+                <img src="images/student2.png" alt="Student 2">
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="call-to-action">
+            <h2>Join eQuizards AI University Today</h2>
+            <button class="btn primary-btn">Join Now</button>
+            <button class="btn secondary-btn">Explore More Courses</button>
+        </section>
+    </div>
+    <footer include-html="footer.html"></footer>
+    <script>
+        // GSAP animations for sections
+        gsap.from('.hero-title', { duration: 1.5, y: -50, opacity: 0, ease: 'bounce' });
+        gsap.from('.hero-subtitle', { duration: 1.5, y: 50, opacity: 0, ease: 'power2.out', delay: 0.5 });
+        gsap.from('.section-title', { duration: 1, x: -100, opacity: 0, stagger: 0.3 });
+        gsap.from('.course-card', { duration: 1, opacity: 0, stagger: 0.2, ease: 'power2.out' });
+        gsap.from('.testimonial', { duration: 1, opacity: 0, y: 50, stagger: 0.3, ease: 'power2.out' });
+        gsap.from('.call-to-action h2', { duration: 1, y: -50, opacity: 0, ease: 'power2.out' });
+        gsap.from('.call-to-action button', { duration: 1, opacity: 0, stagger: 0.3, ease: 'power2.out' });
+
+        // Parallax effect using vanilla JavaScript
+        document.addEventListener('scroll', function() {
+            document.querySelectorAll('.parallax').forEach(function(el) {
+                var speed = el.getAttribute('data-parallax-speed');
+                var yPos = -(window.scrollY * speed);
+                var coords = '50% ' + yPos + 'px';
+                el.style.backgroundPosition = coords;
+            });
+        });
+    </script>
+</body>
+</html>
